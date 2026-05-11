@@ -9,23 +9,14 @@
 <body>
   <div class="wrapper">
     <aside class="profile-panel">
-      <button type="button" class="profile-card animate-fade click-card" data-target="about">
+      <div class="profile-card animate-fade">
         <div class="profile-image"></div>
         <div class="profile-intro">
           <p class="hello">Hello!</p>
           <h1>Cao Thị Thanh Huyền</h1>
           <p class="subtitle">Chuyên viên Đồ họa kỹ thuật số</p>
         </div>
-      </button>
-
-      <button type="button" class="info-card animate-fade delay-1 click-card" data-target="about">
-        <h2>Thông tin</h2>
-        <ul>
-          <li><strong>Công trình:</strong> 16 bài ở Quận Gò Vấp</li>
-          <li><strong>Sở thích:</strong> đồ thủ công, cầu lông, bida</li>
-          <li><strong>Ngành nghề:</strong> Đồ họa kỹ thuật số</li>
-        </ul>
-      </button>
+      </div>
 
       <button type="button" class="info-card animate-fade delay-2 click-card" data-target="skills">
         <h2>Kỹ năng</h2>
@@ -51,8 +42,21 @@
 
     <main class="content-panel">
       <section class="about-section animate-fade" id="about">
-        <h2>Giới thiệu</h2>
-        <p>Tôi là Cao Thị Thanh Huyền, chuyên viên đồ họa kỹ thuật số. Tôi kết hợp sáng tạo và kỹ thuật để tạo sản phẩm vừa tinh tế vừa đúng kỹ thuật.</p>
+        <div class="about-row">
+          <div class="about-intro">
+            <h2>Giới thiệu</h2>
+            <p>Tôi là Cao Thị Thanh Huyền, chuyên viên đồ họa kỹ thuật số. Tôi kết hợp sáng tạo và kỹ thuật để tạo sản phẩm vừa tinh tế vừa đúng kỹ thuật.</p>
+            <p>Tôi yêu thích sự kết hợp giữa thủ công và kỹ thuật số, luôn đảm bảo mỗi sản phẩm đều có bố cục rõ ràng và tính thẩm mỹ cao.</p>
+          </div>
+          <div class="about-summary">
+            <h3>Thông tin nhanh</h3>
+            <ul>
+              <li><strong>Công trình:</strong> 16 bài ở Quận Gò Vấp</li>
+              <li><strong>Sở thích:</strong> đồ thủ công, cầu lông, bida</li>
+              <li><strong>Ngành nghề:</strong> Đồ họa kỹ thuật số</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section class="experience-section animate-fade delay-1" id="experience">
@@ -63,7 +67,7 @@
         <p>Thiết kế hình ảnh thương hiệu, key visuals và nội dung số cho chiến dịch. Tôi ưu hóa phần nhìn và thông điệp để phù hợp mục tiêu marketing.</p>
 
         <div class="timeline">
-          <button type="button" class="timeline-link" data-target="experience">
+          <button type="button" class="timeline-link click-card" data-target="experience">
             <div class="timeline-item">
               <div class="timeline-date">2023 - 2024</div>
               <div>
@@ -73,7 +77,7 @@
             </div>
           </button>
 
-          <button type="button" class="timeline-link" data-target="experience">
+          <button type="button" class="timeline-link click-card" data-target="experience">
             <div class="timeline-item">
               <div class="timeline-date">2021 - 2023</div>
               <div>
@@ -83,7 +87,7 @@
             </div>
           </button>
 
-          <button type="button" class="timeline-link" data-target="experience">
+          <button type="button" class="timeline-link click-card" data-target="experience">
             <div class="timeline-item">
               <div class="timeline-date">2018 - 2019</div>
               <div>
