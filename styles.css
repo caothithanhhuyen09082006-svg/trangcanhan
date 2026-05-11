@@ -34,6 +34,20 @@ a {
   text-decoration: none;
 }
 
+button {
+  appearance: none;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.click-card {
+  width: 100%;
+}
+
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -82,7 +96,11 @@ a {
   width: 100%;
   aspect-ratio: 4 / 5;
   border-radius: 28px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 214, 236, 0.6) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 214, 236, 0.2) 100%),
+              url("tải xuống (98).jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border: 1px solid rgba(214, 51, 132, 0.12);
   position: relative;
   overflow: hidden;
@@ -296,6 +314,122 @@ a {
   color: var(--accent);
 }
 
+.page-title {
+  margin-bottom: 1.75rem;
+}
+
+.page-title h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.page-title p {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  max-width: 720px;
+}
+
+.detail-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  align-items: start;
+}
+
+.detail-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.info-compact h3 {
+  margin-top: 1.4rem;
+}
+
+.info-block {
+  margin-top: 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 28px;
+  border: 1px solid rgba(214, 51, 132, 0.12);
+  padding: 1.75rem;
+}
+
+.info-block-item {
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.skill-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255, 214, 236, 0.9), rgba(214, 51, 132, 0.12));
+  margin-bottom: 1rem;
+}
+
+.timeline-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(214, 51, 132, 0.14);
+  border-radius: 28px;
+  padding: 1.5rem;
+}
+
+.back-link {
+  margin-top: 1.75rem;
+}
+
+.education-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.edu-card h3 {
+  margin: 0 0 0.75rem;
+}
+
+.project-card {
+  padding-left: 0;
+}
+
+.project-list article,
+.timeline-link,
+.link-card {
+  text-decoration: none;
+}
+
+.project-card:hover,
+.timeline-link:hover,
+.link-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-card span {
+  margin-top: 0.2rem;
+}
+
+.project-card h3 {
+  margin-bottom: 0.4rem;
+}
+
+.project-card p {
+  color: var(--muted);
+}
+
+.project-card {
+  border-left: 3px solid var(--accent);
+  background: rgba(255, 255, 255, 0.98);
+}
+
+
 .project-list {
   display: grid;
   gap: 1rem;
@@ -308,6 +442,7 @@ a {
   align-items: start;
   padding: 1rem 1rem 1rem 0;
   border-left: 3px solid var(--accent);
+  background: rgba(255, 255, 255, 0.98);
 }
 
 .project-card span {
@@ -335,6 +470,102 @@ a {
   display: block;
   text-decoration: none;
   color: inherit;
+}
+
+.detail-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(43, 12, 44, 0.82);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 1000;
+}
+
+.detail-overlay.visible {
+  display: flex;
+}
+
+.detail-panel {
+  width: min(980px, 100%);
+  max-height: min(90vh, 900px);
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.99);
+  border-radius: 32px;
+  padding: 2rem;
+  box-shadow: 0 32px 100px rgba(0, 0, 0, 0.18);
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid rgba(214, 51, 132, 0.18);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--accent);
+  font-size: 1.5rem;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.detail-row {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.detail-row-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.detail-mini-card {
+  background: rgba(255, 214, 236, 0.12);
+  border: 1px solid rgba(214, 51, 132, 0.14);
+  border-radius: 24px;
+  padding: 1rem;
+}
+
+.detail-mini-card strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.detail-mini-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.detail-panel h2 {
+  margin-top: 0;
+}
+
+.detail-panel p {
+  margin: 0.85rem 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.detail-panel ul {
+  margin: 0.8rem 0 0 1.2rem;
+  padding: 0;
+  color: var(--text);
+}
+
+.detail-panel li {
+  margin-bottom: 0.55rem;
+}
+
+.project-image.small {
+  height: 140px;
 }
 
 .animate-fade {
