@@ -1,7 +1,7 @@
 :root {
   color-scheme: light;
   --bg: #fff0f6;
-  --surface: rgba(255, 255, 255, 0.9);
+  --surface: rgba(255, 255, 255, 0.96);
   --text: #2b0c2c;
   --muted: #6b4660;
   --accent: #d63384;
@@ -54,6 +54,7 @@ a {
 .about-section,
 .experience-section,
 .research-section,
+.education-section,
 .projects-section {
   background: var(--surface);
   border-radius: 32px;
@@ -123,7 +124,8 @@ a {
 .about-section h2,
 .experience-section h2,
 .research-section h2,
-.projects-section h2 {
+.projects-section h2,
+.education-section h2 {
   margin: 0 0 1.25rem;
   font-size: 1.3rem;
   letter-spacing: 0.02em;
@@ -132,7 +134,8 @@ a {
 .info-card ul,
 .profile-card ul,
 .projects-section ul,
-.research-grid ul {
+.research-grid ul,
+.education-grid ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -141,7 +144,8 @@ a {
 }
 
 .info-card li,
-.research-grid li {
+.research-grid li,
+.education-grid li {
   font-size: 0.95rem;
   color: var(--text);
 }
@@ -174,7 +178,8 @@ a {
 .about-section p,
 .experience-section p,
 .projects-section p,
-.research-section p {
+.research-section p,
+.education-section p {
   margin: 0;
   color: var(--muted);
 }
@@ -225,26 +230,64 @@ a {
   color: var(--muted);
 }
 
+.education-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.edu-frame,
+.research-card,
+.project-card {
+  display: block;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(214, 51, 132, 0.14);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.edu-frame:hover,
+.research-card:hover,
+.project-card:hover,
+.timeline-link:hover,
+.link-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(214, 51, 132, 0.12);
+  border-color: rgba(214, 51, 132, 0.28);
+}
+
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+  margin-bottom: 1rem;
+}
+
+.edu-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.edu-header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.edu-frame ul,
+.research-grid ul {
+  gap: 0.75rem;
+}
+
 .research-grid {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.research-grid article {
-  padding: 1.25rem;
-  border-radius: 24px;
-  background: rgba(214, 51, 132, 0.08);
-  border: 1px solid rgba(214, 51, 132, 0.14);
-}
-
 .research-grid h3 {
   margin: 0 0 0.75rem;
   font-size: 1.1rem;
-}
-
-.research-grid ul {
-  gap: 0.6rem;
 }
 
 .research-grid li::before {
@@ -258,7 +301,7 @@ a {
   gap: 1rem;
 }
 
-.project-list article {
+.project-card {
   display: grid;
   grid-template-columns: 3rem 1fr;
   gap: 1rem;
@@ -267,7 +310,7 @@ a {
   border-left: 3px solid var(--accent);
 }
 
-.project-list span {
+.project-card span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -279,13 +322,19 @@ a {
   font-weight: 700;
 }
 
-.project-list h3 {
+.project-card h3 {
   margin: 0 0 0.4rem;
 }
 
-.project-list p {
+.project-card p {
   margin: 0;
   color: var(--muted);
+}
+
+.link-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .animate-fade {
@@ -333,6 +382,7 @@ a {
   .about-section,
   .experience-section,
   .research-section,
+  .education-section,
   .projects-section {
     padding: 1.5rem;
   }
@@ -348,6 +398,7 @@ a {
   .about-section,
   .experience-section,
   .research-section,
+  .education-section,
   .projects-section {
     border-radius: 24px;
   }
