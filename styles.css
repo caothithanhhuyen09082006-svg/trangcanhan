@@ -153,6 +153,11 @@ button {
 
 .info-card {
   padding: 1.25rem !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 214, 236, 0.4) 100%),
+              url("tải xuống (87).jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .info-card h2 {
@@ -194,6 +199,11 @@ button {
 .software-card {
   padding: 1.25rem !important;
   padding-top: 1.25rem !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 214, 236, 0.4) 100%),
+              url("tải xuống (87).jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .software-grid {
@@ -511,24 +521,21 @@ button {
 
 .project-card {
   display: grid;
-  grid-template-columns: 3rem 1fr;
+  grid-template-columns: auto 1fr;
   gap: 1rem;
-  align-items: start;
-  padding: 1rem 1rem 1rem 0;
+  align-items: center;
+  padding: 1rem 1rem;
   border-left: 3px solid var(--accent);
   background: rgba(255, 255, 255, 0.98);
 }
 
-.project-card span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 16px;
-  background: var(--accent-soft);
-  color: var(--accent);
-  font-weight: 700;
+.project-image.project-image-small {
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(214, 51, 132, 0.16), rgba(255, 214, 236, 0.4));
+  border: 1px solid rgba(214, 51, 132, 0.14);
 }
 
 .project-card h3 {
@@ -660,6 +667,10 @@ button {
   animation-delay: 0.3s;
 }
 
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -673,6 +684,173 @@ button {
   }
 
   .research-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Experience Vertical Timeline */
+.experience-timeline {
+  margin-top: 1.5rem;
+}
+
+.timeline-vertical {
+  display: grid;
+  gap: 2rem;
+  position: relative;
+  padding: 0 0 0 3rem;
+}
+
+.timeline-vertical::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  border-radius: 2px;
+}
+
+.timeline-card-vertical {
+  position: relative;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.timeline-bar {
+  position: absolute;
+  left: -1.62rem;
+  top: 0.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px var(--accent);
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.timeline-content p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Education Frame & Columns */
+.education-frame {
+  background: var(--surface);
+  border-radius: 32px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  margin-top: 1.5rem;
+}
+
+.education-frame h2 {
+  margin: 0 0 1.75rem;
+  font-size: 1.3rem;
+  color: var(--text);
+}
+
+.education-columns {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.education-column {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(214, 51, 132, 0.14);
+  border-radius: 28px;
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.85rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-column:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(214, 51, 132, 0.12);
+  border-color: rgba(214, 51, 132, 0.28);
+}
+
+.column-year {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.education-column h3 {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+}
+
+.education-column p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.more-link {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.more-link:hover {
+  background: rgba(214, 51, 132, 0.2);
+  transform: translateX(4px);
+}
+
+.detail-content-full {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.detail-content-full article {
+  display: grid;
+  gap: 1rem;
+}
+
+.detail-content-full h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.detail-content-full ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.detail-content-full li {
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 820px) {
+  .detail-content-full {
     grid-template-columns: 1fr;
   }
 }
@@ -695,6 +873,18 @@ button {
   .software-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .education-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .timeline-vertical {
+    padding: 0 0 0 2.5rem;
+  }
+
+  .timeline-bar {
+    left: -1.4rem;
+  }
 }
 
 @media (max-width: 620px) {
@@ -715,5 +905,9 @@ button {
 
   .profile-image {
     min-height: 280px;
+  }
+
+  .education-columns {
+    grid-template-columns: 1fr;
   }
 }
