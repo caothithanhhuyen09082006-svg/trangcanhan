@@ -1,12 +1,4 @@
 # trangcanhan
-# 🌐 Personal Portfolio Website
-
-Đây là dự án website trang cá nhân (Portfolio Website) được xây dựng nhằm giới thiệu thông tin bản thân, kỹ năng, dự án và định hướng phát triển trong lĩnh vực lập trình Web Frontend.
-
-Dự án tập trung vào giao diện hiện đại, tối ưu trải nghiệm người dùng và khả năng responsive trên nhiều thiết bị khác nhau.
-
----
-
 # 📖 Giới thiệu dự án
 
 Website được thiết kế như một portfolio cá nhân giúp:
