@@ -202,85 +202,261 @@
       </section>
 
      
-<section class="image-section">
-  <div class="image-grid">
-    <div class="image-card">
-      <img src="Screenshot 2026-05-15 235200.png" alt="Hình 1">
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Thiết Kế</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 40px 20px;
+  }
+
+  .portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .portfolio-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+  }
+
+  .portfolio-header h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* Cấu trúc khung ngang theo từng lớp (Section Row) */
+  .design-row {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding: 24px;
+    margin-bottom: 30px;
+  }
+
+  .row-title {
+    font-size: 18px;
+    color: #34495e;
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+    padding-left: 12px;
+  }
+
+  .row-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 4px;
+    background-color: #3498db;
+    border-radius: 2px;
+  }
+
+  /* Khung chứa các thẻ sản phẩm nằm ngang */
+  .card-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Cho phép cuộn ngang nếu màn hình nhỏ */
+    padding-bottom: 10px;
+  }
+
+  /* Định dạng từng thẻ sản phẩm */
+  .image-card {
+    flex: 1;
+    min-width: 220px; /* Đảm bảo không bị méo khi thu nhỏ */
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .image-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  }
+
+  .image-wrapper {
+    width: 100%;
+    height: 180px;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Giúp ảnh không bị vỡ/méo tỷ lệ */
+  }
+
+  .image-text {
+    padding: 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #555;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  /* Tùy chỉnh thanh cuộn ngang cho mượt mà */
+  .card-slider::-webkit-scrollbar {
+    height: 6px;
+  }
+  .card-slider::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  .card-slider::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+  }
+  .card-slider::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+
+  /* Responsive cho thiết bị di động */
+  @media (max-width: 768px) {
+    .card-slider {
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+    }
+    .image-card {
+      min-width: 260px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="portfolio-container">
+
+  <header class="portfolio-header">
+    <h1>Thiết kế tổng hợp 1 số bài tập đạt xuất sắc và phần dự thi</h1>
+  </header>
+
+  <section class="design-row">
+    <h2 class="row-title">Lớp 01: Thiết kế Sự kiện & Học đường</h2>
+    <div class="card-slider">
+      
+      <div class="image-card">
+        <div class="image-wrapper">
+          <img src="Screenshot 2026-05-15 235200.png" alt="Poster 20/11">
+        </div>
+        <p class="image-text">Thiết kế poster ngày Nhà giáo Việt Nam 20/11</p>
+      </div>
+
+      <div class="image-card">
+        <div class="image-wrapper">
+          <img src="Screenshot 2026-05-15 235036.png" alt="Bookmark 20/11">
+        </div>
+        <p class="image-text">Thiết kế bookmark ngày Nhà giáo Việt Nam 20/11</p>
+      </div>
+
+      <div class="image-card">
+        <div class="image-wrapper">
+          <img src="Screenshot 2026-05-15 235626.png" alt="Tuyển sinh K19">
+        </div>
+        <p class="image-text">Thiết kế truyền thông tuyển sinh K19</p>
+      </div>
+
     </div>
-     <p class="image-text">
-    Thiết kế 20/11 poster về ngày nhà giáo Việt Nam.
-  </p>
+  </section>
 
-    <div class="image-card">
-      <img src="Screenshot 2026-05-15 235004.png" alt="Hình 2">
+  <section class="design-row">
+    <h2 class="row-title">Lớp 02: Poster Quảng cáo & Thương mại</h2>
+    <div class="card-slider">
+
+      <div class="image-card">
+        <div class="image-wrapper">
+          <img src="Screenshot 2026-05-15 235004.png" alt="Poster Son">
+        </div>
+        <p class="image-text">Thiết kế poster quảng cáo sản phẩm son</p>
+      </div>
+
+      <div class="image-card">
+        <div class="image-wrapper">
+          <img src="Screenshot 2026-05-15 235200.png" alt="Poster Gà rán">
+        </div>
+        <p class="image-text">Thiết kế poster thương hiệu gà rán</p>
+      </div>
+
     </div>
-     <p class="image-text">
-    Thiết kế poster sản phẩm quảng cáo son.
-  </p>
-    
-    <div class="image-card">
-      <img src="Screenshot 2026-05-15 235036.png" alt="Hình 3">
+  </section>
+
+  <section class="design-row">
+    <h2 class="row-title">Lớp 03: Thiết kế 3D, Giao diện Web & Thương hiệu</h2>
+    <div class="card-slider">
+
+      <div class="image-card">
+        <div class="image-wrapper">
+          <img src="Screenshot 2026-05-15 235910.png" alt="Thiết kế 3D">
+        </div>
+        <p class="image-text">Thiết kế 3D không gian cửa hàng bánh</p>
+      </div>
+
+      <div class="image-card">
+        <div class="image-wrapper">
+          <img src="Screenshot 2026-05-15 235943.png" alt="Website Bánh">
+        </div>
+        <p class="image-text">Thiết kế giao diện website bánh sandwich</p>
+      </div>
+
+      <div class="image-card">
+        <div class="image-wrapper">
+          <img src="Screenshot 2026-05-15 235352.png" alt="CLB Đồ họa">
+        </div>
+        <p class="image-text">Thiết kế bộ nhận diện CLB Đồ họa</p>
+      </div>
+
     </div>
-     <p class="image-text">
-    Thiết kế markbook 20/11 về ngày nhà giáo Việt Nam.
-  </p>
+  </section>
 
-    <div class="image-card">
-      <img src="Screenshot 2026-05-15 235200.png" alt="Hình 4">
+  <section class="design-row">
+    <h2 class="row-title">Lớp 04: Nhiếp ảnh & Sáng tạo Cá nhân</h2>
+    <div class="card-slider">
+
+      <div class="image-card">
+        <div class="image-wrapper">
+          <img src="Screenshot 2026-05-15 235237.png" alt="Poster cá nhân">
+        </div>
+        <p class="image-text">Thiết kế poster định hình phong cách cá nhân</p>
+      </div>
+
+      <div class="image-card">
+        <div class="image-wrapper">
+          <img src="Screenshot 2026-05-15 235506.png" alt="Hậu kì nhiếp ảnh">
+        </div>
+        <p class="image-text">Thiết kế và xử lý hậu kỳ nhiếp ảnh chuyên nghiệp</p>
+      </div>
+
     </div>
-     <p class="image-text">
-    Thiết kế porter gà rán.
-  </p>
+  </section>
 
-    <div class="image-card">
-      <img src="Screenshot 2026-05-15 235237.png" alt="Hình 5">
-    </div>
-     <p class="image-text">
-    Thiết kế poster cá nhân.
-  </p>
+</div>
 
-    <div class="image-card">
-      <img src="Screenshot 2026-05-15 235352.png" alt="Hình 6">
-    </div>
-     <p class="image-text">
-    Thiết kế clb đồ họa
-  </p>
-
-    <div class="image-card">
-      <img src="Screenshot 2026-05-15 235506.png" alt="Hình 7">
-    </div>
-     <p class="image-text">
-    Thiết kế nhiếp ảnh hậu kì
-  </p>
-
-    <div class="image-card">
-      <img src="Screenshot 2026-05-15 235626.png" alt="Hình 8">
-    </div>
-     <p class="image-text">
-    Thiết kế tuyển sinh k19
-  </p>
-
-    <div class="image-card">
-      <img src="Screenshot 2026-05-15 235910.png" alt="Hình 9">
-    </div>
-     <p class="image-text">
-    Thiết kế 3D cửa hàng bánh 
-  </p>
-
-    <div class="image-card">
-      <img src="Screenshot 2026-05-15 235943.png" alt="Hình 10">
-    </div>
-    <p class="image-text">
-    Thiết kế web bánh sanwich 
-  </p>
-
-  </div>
-
-  <p class="image-text">
-    Thiết kế tổng hợp 1 số bài tập đạt xuất  sắc và phần dự thi .
-  </p>
-
-</section>
+</body>
+</html>
 
 </section>
   <div class="detail-overlay" id="detailOverlay" aria-hidden="true">
