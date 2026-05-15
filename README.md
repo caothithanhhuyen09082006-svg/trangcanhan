@@ -83,12 +83,3 @@ Dưới đây là chi tiết 10 bài tập đạt điểm xuất sắc và các 
 ### 📸 Nhóm 4: Nhiếp ảnh & Sáng tạo Cá nhân
 9. **Poster Định hình Phong cách Cá nhân:** Tác phẩm mang tính nghệ thuật cao, thể hiện cái tôi và tư duy thẩm mỹ độc bản.
 10. **Hậu kỳ Nhiếp ảnh Chuyên nghiệp:** Dự án ứng dụng kỹ thuật số để xử lý ánh sáng, màu sắc và chỉnh sửa hình ảnh chuyên sâu.
-
----
-
-## 🛠️ Hướng Dẫn Cài Đặt & Chạy Dự Án (Dành cho Developer)
-Nếu bạn muốn đóng góp hoặc khởi chạy trang web này tại local:
-
-1. **Clone kho lưu trữ:**
-   ```bash
-   git clone [https://github.com/caothithanhhuyen09082006-svg/trangcanhan.git](https://github.com/caothithanhhuyen09082006-svg/trangcanhan.git)
